@@ -4,7 +4,7 @@ from time import sleep,time
 def wite_words(word_count,file_name):
     with open(file_name, 'w', encoding='utf-8') as file:
         for n in range(1,word_count+1):
-            file.write('Какое-то слово №'+ str(n) + '\n')
+            file.write('Какое-то слово № '+ str(n) + '\n')
             sleep(0.1)
     print(f'Завершилась запись в файл {file_name}')
 
