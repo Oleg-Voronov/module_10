@@ -31,7 +31,7 @@ class Cafe:
         return rez
 
     def guest_arrival(self,*guests):
-        def copi_(a,b):
+        def copy_(a,b):
             for i in range(a,b):
                 self.tables[i].guest = guests[i]
                 print(f'{self.tables[i].guest.name} сел(-а) за стол номер {self.tables[i].number}')
@@ -39,12 +39,12 @@ class Cafe:
         k=len(guests)
         l=len(self.tables)
         if k>l:
-            copi_(0,l)
+            copy_(0,l)
             for i in range(l,k):
                 self.que.put(guests[i])
                 print(f'{guests[i].name} в очереди')
         else:
-            copi_(0,k)
+            copy_(0,k)
 
     def discuss_guests(self):
         while not self.que.empty() or not self.tables_empty():
