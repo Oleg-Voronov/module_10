@@ -7,7 +7,7 @@ def read_info(name):
 
 if __name__ == '__main__':
 
-    filenames = ['./file 1.txt','./file 2.txt','./file 3.txt','./file 4.txt']
+    filenames = [f'./file {number}.txt' for number in range(1, 5)]
 
 # ------------- файлы по очереди ------------
     t_start = datetime.datetime.now()
